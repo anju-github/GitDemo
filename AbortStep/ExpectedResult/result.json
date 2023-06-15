@@ -1,0 +1,34 @@
+{ 
+
+  "outputParameters": [ 
+
+    { 
+
+      "name": "Players1", 
+
+	"value": "Dhoni" 
+	},
+	
+	
+    { 
+
+      "name": "Games1", 
+
+      "value": "Football" 
+
+    
+    }
+
+    
+  ],
+    "outputFiles": [ 
+
+    { 
+
+      "fileName": "Op_SecondOption.xlsx" 
+
+    } 
+
+  ] 
+
+} 
