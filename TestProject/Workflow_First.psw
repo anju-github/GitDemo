@@ -30,8 +30,8 @@
     <created_user>john</created_user>
     <created_date>2023&#x2f;06&#x2f;15 10&#x3a;45&#x3a;35.635</created_date>
     <modified_user>john</modified_user>
-    <modified_date>2023&#x2f;06&#x2f;15 10&#x3a;46&#x3a;36.575</modified_date>
-	<key_for_session_key/>
+    <modified_date>2023&#x2f;06&#x2f;15 13&#x3a;23&#x3a;05.472</modified_date>
+	<key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA&#x3d;</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
@@ -42,6 +42,18 @@
     <hop>
       <from>Generate Rows</from>
       <to>Write to log</to>
+      <enabled>Y</enabled>
+      <visible>Y</visible>
+    </hop>
+    <hop>
+      <from>Write to log</from>
+      <to>Set Workflow Result</to>
+      <enabled>Y</enabled>
+      <visible>Y</visible>
+    </hop>
+    <hop>
+      <from>Set Workflow Result</from>
+      <to>Dummy &#x28;do nothing&#x29;</to>
       <enabled>Y</enabled>
       <visible>Y</visible>
     </hop>
@@ -118,6 +130,73 @@
     <GUI>
       <xloc>432</xloc>
       <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Set Workflow Result</name>
+    <type>SetWorkflowResult</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+      <success>true</success>
+      <status>Complete</status>
+      <message>swr</message>
+      <operationsTotal>0</operationsTotal>
+      <operationsPerformed>0</operationsPerformed>
+      <attribute1/>
+      <attribute2/>
+      <attribute3/>
+      <attribute4/>
+      <attribute5/>
+      <attribute6/>
+      <fileNames/>
+      <failureReason>UNKNOWN</failureReason>
+      <outputFields>        <field>          <name>name</name>
+          <type>String</type>
+          <displayName>name</displayName>
+          <value>name</value>
+        </field>      </outputFields>    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>624</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Dummy &#x28;do nothing&#x29;</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>656</xloc>
+      <yloc>384</yloc>
       <draw>Y</draw>
     </GUI>
     </step>
